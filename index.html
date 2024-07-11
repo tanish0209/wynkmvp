@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynk Music</title>
+    <link rel="shortcut icon"
+        href="https://w7.pngwing.com/pngs/410/972/png-transparent-apple-brand-logo-macintosh-apple-icon-format-icon-apple-grey-logo-angle-text-heart-thumbnail.png"
+        type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="design.css">
+    <script src="script/logic.js" type="module" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-content-sb align-items-center">
+            <div class="logo">
+                <img src="Assets/idxvsamq5q.png" alt="logo" />
+                <span class="justify-content-sb align-items-center">Wynk Music</span>
+            </div>
+            <div class="search-bar flex">
+                <div class="search-icon flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-search">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg></div>
+                <input type="text" id="myText" value=" " placeholder="Search for Songs">
+                <button id="search">
+                    search
+                </button>
+            </div>
+            <nav>
+                <ul class="flex justify-content-sb align-items-center">
+                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-square-gantt-chart">
+                                <rect width="18" height="18" x="3" y="3" rx="2" />
+                                <path d="M9 8h7" />
+                                <path d="M8 12h6" />
+                                <path d="M11 16h5" />
+                            </svg>Manage Subscription</a>
+                    </li>
+                    <li><a href="">|</a></li>
+                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-round">
+                                <circle cx="12" cy="8" r="5" />
+                                <path d="M20 21a8 8 0 0 0-16 0" />
+                            </svg>Login</a></li>
+                    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-align-justify">
+                                <line x1="3" x2="21" y1="6" y2="6" />
+                                <line x1="3" x2="21" y1="12" y2="12" />
+                                <line x1="3" x2="21" y1="18" y2="18" />
+                            </svg></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="SubNavBar">
+        <div class="flex justify-content-sb align-items-center">
+            <div>
+                <h6>All</h6>
+            </div>
+            <div>
+                <h6>Trending Now</h6>
+            </div>
+            <div>
+                <h6>Old Songs</h6>
+            </div>
+            <div>
+                <h6>New Songs</h6>
+            </div>
+            <div>
+                <h6>Mood & Genre</h6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+                </svg>
+            </div>
+            <div>
+                <h6>Top Albums</h6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+                </svg>
+            </div>
+            <div>
+                <h6>Top Artists</h6>
+            </div>
+            <div>
+                <h6>Top Playlists</h6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+                </svg>
+            </div>
+            <div>
+                <h6>Podcast</h6>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="flex">
+            <div class="left-side">
+                <div>
+                    <ul id="search-results"></ul>
+                </div>
+            </div>
+            <div class="right-side">
+                <audio id="music-player" src="" controls></audio>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-8">
+                <div id="search-results">
+
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
